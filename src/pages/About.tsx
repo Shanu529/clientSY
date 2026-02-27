@@ -3,8 +3,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 // import lobbyImg from "@/assets/gallery-lobby.jpg";
 import lobbyImg from "@/assets/aboutImg.png";
-
-import heroImg from "@/assets/mainImg.jpg";
+import heroImg from "@/assets/mainimg.jpg";
 
 const About = () => {
   return (
