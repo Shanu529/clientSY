@@ -23,13 +23,13 @@ const Amenities = () => {
     <main>
       <Navbar />
       <section className="pt-32 pb-16 section-padding bg-background">
-        <div className="container-luxury text-center">
+        <div className="container-luxury lg:text-center">
           <ScrollReveal>
             <p className="font-accent text-lg text-sapphire tracking-[0.3em] uppercase mb-4">World-Class</p>
             <h1 className="font-heading text-4xl md:text-6xl font-bold text-foreground mb-6">
               Our <span className="sapphire-gradient-text">Amenities</span>
             </h1>
-            <div className="divider-sapphire mb-6" />
+            <div className="divider-sapphire mb-6 w-full lg:w-16" />
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">Every amenity at hotel Icon is designed to exceed your expectations.</p>
           </ScrollReveal>
         </div>

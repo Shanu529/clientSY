@@ -45,7 +45,7 @@ const FeaturedRooms = () => {
 
         {/* Heading */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`lg:text-center mb-16 transition-all duration-1000 ${
             visible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
@@ -62,7 +62,7 @@ const FeaturedRooms = () => {
             </span>
           </h2>
 
-          <div className="w-16 h-1 bg-blue-500 mx-auto mb-6 rounded-full" />
+          <div className=" w-full lg:w-16 h-1 bg-blue-500 mx-auto mb-6 rounded-full" />
 
           <p className="text-gray-400 max-w-2xl mx-auto">
             Each room is a sanctuary designed for discerning travelers who expect nothing but the finest.

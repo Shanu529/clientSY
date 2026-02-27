@@ -92,7 +92,7 @@ const AboutPreview = () => {
           </div>
 
           {/* Content */}
-          <div ref={contentRef} className="text-center lg:text-left">
+          <div ref={contentRef} className="lg:text-center lg:text-left">
             <p className="uppercase tracking-[0.4em] text-blue-400 text-xs sm:text-sm mb-4">
               Our Story
             </p>
@@ -104,7 +104,7 @@ const AboutPreview = () => {
               </span>
             </h2>
 
-            <div className="line w-16 h-1 bg-blue-500 mb-8 rounded-full mx-auto lg:mx-0" />
+            <div className="line w-full lg:w-16 h-1 bg-blue-500 mb-8 rounded-full mx-auto lg:mx-0" />
 
             <p className="text-gray-300 mb-6 text-sm sm:text-base">
               Nestled in the vibrant heart of Rajpura, Hotel Icon

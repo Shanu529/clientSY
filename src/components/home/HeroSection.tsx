@@ -32,13 +32,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(59,130,246,0.25),transparent_60%)]" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full md:text-center px-6">
+      <div className="relative z-10 flex flex-col lg:items-center justify-center h-full md:text-center px-6">
         {/* Welcome Text */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="uppercase tracking-[0.5em] text-blue-400 text-sm md:text-lg mb-6"
+          className="uppercase tracking-[0.5em] text-blue-400 items-start text-sm md:text-lg mb-6"
         >
           Welcome to
         </motion.p>
@@ -85,11 +85,13 @@ const HeroSection = () => {
         </motion.button>
 
         {/* Scroll Indicator */}
-        <motion.div
+       
+      </div>
+       <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-10"
+          className="absolute bottom-10 items-center justify-center w-full flex"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
@@ -99,7 +101,6 @@ const HeroSection = () => {
             <div className="w-1 h-3 bg-blue-500 mt-2 rounded-full" />
           </motion.div>
         </motion.div>
-      </div>
     </section>
   );
 };
