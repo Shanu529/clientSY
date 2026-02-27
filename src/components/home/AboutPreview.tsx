@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import lobbyImg from "@/assets/gallery-lobby.jpg";
+import lobbyImg from "@/assets/loby.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +9,7 @@ const AboutPreview = () => {
   const sectionRef = useRef(null);
   const imageRef = useRef(null);
   const contentRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -22,32 +23,44 @@ const AboutPreview = () => {
         },
       });
 
-      // Image reveal (clip effect)
+      // Image reveal
       tl.from(imageRef.current, {
         clipPath: "inset(0 0 100% 0)",
         duration: 1,
         ease: "power3.out",
       });
 
-      // Parallax zoom
+      // Image zoom
       tl.fromTo(
         imageRef.current.querySelector("img"),
-        { scale: 1.3 },
+        { scale: 1.2 },
         { scale: 1, duration: 1 },
-        0,
+        0
       );
 
-      // Text stagger reveal
+      // Animate text only (NOT button)
       tl.from(
-        contentRef.current.children,
+        contentRef.current.querySelectorAll("p, h2, .line"),
         {
-          y: 80,
+          y: 60,
           opacity: 0,
-          stagger: 0.15,
+          stagger: 0.2,
           duration: 1,
           ease: "power3.out",
         },
-        0.3,
+        0.3
+      );
+
+      // Animate button separately
+      tl.from(
+        buttonRef.current,
+        {
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+        },
+        0.8
       );
     }, sectionRef);
 
@@ -57,27 +70,30 @@ const AboutPreview = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative  min-h-screen bg-black overflow-hidden flex items-center"
+      className="relative min-h-screen bg-black flex items-center overflow-hidden"
     >
-      {/* Blue ambient glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_60%)]" />
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.12),transparent_60%)]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
           {/* Image */}
-          <div ref={imageRef} className="relative rounded-xl overflow-hidden">
+          <div
+            ref={imageRef}
+            className="relative rounded-2xl overflow-hidden shadow-2xl"
+          >
             <img
               src={lobbyImg}
-              alt="Royal Orchid Palace grand lobby"
-              className="w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover"
-              loading="lazy"
+              alt="Hotel Icon Rajpura lobby"
+              className="w-full h-[300px] sm:h-[420px] lg:h-[550px] object-cover"
             />
-            <div className="absolute inset-0 border border-blue-500/30 rounded-xl" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
 
           {/* Content */}
-          <div ref={contentRef}>
-            <p className="uppercase tracking-[0.4em] text-blue-400 text-sm mb-4">
+          <div ref={contentRef} className="text-center lg:text-left">
+            <p className="uppercase tracking-[0.4em] text-blue-400 text-xs sm:text-sm mb-4">
               Our Story
             </p>
 
@@ -88,24 +104,36 @@ const AboutPreview = () => {
               </span>
             </h2>
 
-            <div className="w-16 h-1 bg-blue-500 mb-8 rounded-full" />
+            <div className="line w-16 h-1 bg-blue-500 mb-8 rounded-full mx-auto lg:mx-0" />
 
-            <p className="text-gray-300 leading-relaxed mb-6">
-              Nestled in the vibrant heart of Ludhiana, Royal Orchid Palace
+            <p className="text-gray-300 mb-6 text-sm sm:text-base">
+              Nestled in the vibrant heart of Rajpura, Hotel Icon
               stands as a beacon of luxury and refined hospitality.
             </p>
 
-            <p className="text-gray-400 leading-relaxed mb-10">
+            <p className="text-gray-400 mb-10 text-sm sm:text-base">
               Every detail reflects our commitment to delivering extraordinary
               experiences and timeless sophistication.
-            </p>
 
-            <a
-              href="/about"
-              className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white uppercase tracking-widest text-sm rounded-md transition-all duration-300"
-            >
-              Discover More
-            </a>
+              
+            </p>
+           
+
+            {/* BUTTON (Now Visible 100%) */}
+            <div ref={buttonRef} className="mt-8">
+              <a
+                href="/about"
+                className="inline-block px-8 py-4
+                bg-white text-black 
+                font-bold uppercase tracking-widest text-[12px]
+                rounded-md shadow-2xl
+                transition-all duration-300
+                hover:bg-blue-600 hover:text-white
+                hover:scale-105"
+              >
+                Discover More
+              </a>
+            </div>
           </div>
         </div>
       </div>

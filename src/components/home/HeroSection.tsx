@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroImg from "@/assets/hero.jpg";
+// import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/mainimg.jpg";
 
 const HeroSection = () => {
   const ref = useRef(null);
@@ -11,8 +12,10 @@ const HeroSection = () => {
   const scale = useTransform(scrollY, [0, 400], [1, 1.15]);
 
   return (
-    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-black">
-      
+    <section
+      ref={ref}
+      className="relative h-screen w-full overflow-hidden bg-black"
+    >
       {/* Background Image */}
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
@@ -22,7 +25,7 @@ const HeroSection = () => {
         />
 
         {/* Dark Blue Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-blue-950/70 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black-950/70 to-black/90" />
       </motion.div>
 
       {/* Blue Glow Effect */}
@@ -30,7 +33,6 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-
         {/* Welcome Text */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -60,10 +62,11 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="max-w-2xl text-gray-300 text-lg md:text-xl leading-relaxed"
+          className="max-w-2xl text-gray-300 text-[12px] md:text-sm leading-relaxed"
         >
-          Discover unparalleled elegance at Ludhiana's most prestigious address.
-          Where every moment is crafted to perfection.
+          Discover unparalleled elegance at Prime Hub Pehar Kalan, NH 7,
+          Rajpura, Punjab 140402. Welcome to Hotel Icon, Rajpura — where every
+          moment is crafted to perfection. 
         </motion.p>
 
         {/* Button */}
@@ -96,7 +99,6 @@ const HeroSection = () => {
             <div className="w-1 h-3 bg-blue-500 mt-2 rounded-full" />
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );

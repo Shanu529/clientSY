@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <h3 className="font-heading text-2xl font-bold sapphire-gradient-text mb-4">
-              Royal Orchid Palace
+              Hotel Icon, Rajpura
             </h3>
             <p className="font-accent text-lg text-muted-foreground leading-relaxed">
               Where luxury meets tradition. Experience the finest hospitality in the heart of Punjab.
@@ -36,7 +36,10 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-sapphire mt-1 flex-shrink-0" />
                 <span className="font-body text-sm text-muted-foreground">
-                  GT Road, Civil Lines,<br />Ludhiana, Punjab 141001, India
+                
+                  
+                  Prime Hub Pehar Kalan, NH 7, 
+                  <br />Rajpura, Punjab 140402
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -45,7 +48,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-sapphire flex-shrink-0" />
-                <span className="font-body text-sm text-muted-foreground">info@royalorchidpalace.com</span>
+                <span className="font-body text-sm text-muted-foreground">info@hotelicon.com</span>
               </div>
             </div>
           </div>
@@ -75,7 +78,7 @@ const Footer = () => {
 
         <div className="divider-sapphire mt-16 mb-8" />
         <p className="text-center font-body text-xs text-muted-foreground tracking-widest uppercase">
-          © 2026 Royal Orchid Palace. All rights reserved.
+          © 2026 Hotel Icon. All rights reserved.
         </p>
       </div>
     </footer>
