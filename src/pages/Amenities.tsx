@@ -30,7 +30,7 @@ const Amenities = () => {
               Our <span className="sapphire-gradient-text">Amenities</span>
             </h1>
             <div className="divider-sapphire mb-6" />
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto">Every amenity at Royal Orchid Palace is designed to exceed your expectations.</p>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto">Every amenity at hotel Icon is designed to exceed your expectations.</p>
           </ScrollReveal>
         </div>
       </section>
