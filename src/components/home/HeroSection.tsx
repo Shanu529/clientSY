@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(59,130,246,0.25),transparent_60%)]" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full md:text-center px-6">
         {/* Welcome Text */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}

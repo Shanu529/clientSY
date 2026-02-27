@@ -37,10 +37,10 @@ const Navbar = () => {
       <div className="container-luxury flex items-center justify-between h-20 md:h-24 px-4 md:px-8">
         <Link to="/" className="flex flex-col items-start">
           <span className="font-heading text-xl md:text-2xl font-bold sapphire-gradient-text tracking-wider">
-            Royal Orchid
+            Hotel icon
           </span>
           <span className="font-accent text-xs md:text-sm text-muted-foreground tracking-[0.3em] uppercase">
-            Palace
+            Rajpura
           </span>
         </Link>
 
